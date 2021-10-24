@@ -1,2 +1,11 @@
 /vendor/
 .DS_Store
+
+*.log
+*.sst
+CURRENT
+IDENTITY
+LOCK
+LOG
+MANIFEST-*
+OPTIONS-*
