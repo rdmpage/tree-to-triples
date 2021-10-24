@@ -4,13 +4,6 @@ error_reporting(E_ALL);
 
 require_once(dirname(dirname(__FILE__)) . '/utils.php');
 
-//----------------------------------------------------------------------------------------
-// http://stackoverflow.com/a/5996888/9684
-function translate_quoted($string) {
-  $search  = array("\\t", "\\n", "\\r");
-  $replace = array( "\t",  "\n",  "\r");
-  return str_replace($search, $replace, $string);
-}
 
 //----------------------------------------------------------------------------------------
 
@@ -26,10 +19,7 @@ $file_handle = fopen($filename, "r");
 while (!feof($file_handle)) 
 {
 	$row = fgetcsv(
-		$file_handle, 
-		0, 
-		translate_quoted(','),
-		translate_quoted('"') 
+		$file_handle
 		);
 				
 	$go = is_array($row);
@@ -48,6 +38,7 @@ while (!feof($file_handle))
 			{
 				if ($v != '')
 				{
+					$v = strip_tags($v);
 					$obj->{$headings[$k]} = $v;
 				}
 			}
@@ -108,10 +99,14 @@ while (!feof($file_handle))
 			if (isset($obj->Author))
 			{
 				$obj->name .= ' ' . $obj->Author;
-			}
-			
+			}			
 		
-			print_r($obj);	
+			// print_r($obj);
+			
+			if ($obj->ID == '10400148')	
+			{
+				//print_r($obj);
+			}
 			
 			$graph = new \EasyRdf\Graph();
 	
@@ -142,7 +137,7 @@ while (!feof($file_handle))
 				$text = $obj->Comments;
 				$text = strip_tags($text);
 			
-				$comment->add('schema:text', addcslashes($text, '"'));
+				$comment->add('schema:text', $text);
 				$taxon->add('schema:comment', $comment);
 			}
 			
@@ -163,7 +158,7 @@ while (!feof($file_handle))
 			if (isset($obj->CitationName))
 			{
 				$citation = create_bnode($graph, 'schema:CreativeWork');
-				$citation->add('schema:name', $obj->CitationName);
+				$citation->add('schema:name', addcslashes($obj->CitationName, '"'));
 			
 				if (isset($obj->CitationVolume ))
 				{
@@ -190,20 +185,25 @@ while (!feof($file_handle))
 			
 			$triples = to_triples($graph);
 			
-			// echo $triples;
+			if ($obj->ID == '10400148')	
+			{
+				//echo $triples . "\n";
+			}
 			
+			echo $triples . "\n";
+			
+			/*
 			$context = new stdclass;
 			$context->{'@vocab'} = 'http://schema.org/';
 			
 			$json =  to_jsonld($triples, $context, $type);
+			*/
 			
-			echo $json . "\n";
-
-			
+			//echo $json . "\n";
 		}
 	}	
 	$row_count++;
 	
-	if ($row_count == 10) exit();
+	//if ($row_count == 200) exit();
 }
 ?>

@@ -111,7 +111,8 @@ function to_triples($graph)
 
 	foreach ($told as $s)
 	{
-		$tnew[] = unescapeString($s);
+//		$tnew[] = unescapeString($s);
+		$tnew[] = $s;
 	}
 
 	$triples = join("\n", $tnew);
