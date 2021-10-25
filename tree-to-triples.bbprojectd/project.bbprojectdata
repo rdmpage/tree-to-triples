@@ -9,6 +9,7 @@
 		<string>2058050D-8D07-43C1-A23F-23B3BF822D00</string>
 		<string>DD4ED8AF-935C-43ED-9D55-EA159720B59A</string>
 		<string>7397D087-AD61-4311-8B82-BB6C1D175CB9</string>
+		<string>2BDB7B69-3DF0-456D-8044-5922579F7D1D</string>
 	</array>
 	<key>ProjectItems</key>
 	<dict>
@@ -55,6 +56,55 @@
 			</dict>
 			<key>ItemName</key>
 			<string>README.md</string>
+			<key>ItemType</key>
+			<string>FileReference</string>
+			<key>UserOverrideItemName</key>
+			<true/>
+		</dict>
+		<key>2BDB7B69-3DF0-456D-8044-5922579F7D1D</key>
+		<dict>
+			<key>ItemData</key>
+			<dict>
+				<key>BookmarkData</key>
+				<data>
+				Ym9vaxQDAAAAAAQQMAAAAC7WIroi+/uaWqj3UXqgAhvC
+				wDaEK4cdgunwrmyu6rT4EAIAAAQAAAADAwAAAAgAKAUA
+				AAABAQAAVXNlcnMAAAAFAAAAAQEAAHJwYWdlAAAABQAA
+				AAEBAABTaXRlcwAAAA8AAAABAQAAdHJlZS10by10cmlw
+				bGVzAAkAAAABAQAAZ21scmVhZGVyAAAACwAAAAEBAABn
+				bWwycmRmLmNwcAAYAAAAAQYAABAAAAAgAAAAMAAAAEAA
+				AABYAAAAbAAAAAgAAAAEAwAAEGcCAAAAAAAIAAAABAMA
+				AIV0DQAAAAAACAAAAAQDAAAEVkwAAAAAAAgAAAAEAwAA
+				8mRgCAMAAAAIAAAABAMAAEOWYAgDAAAACAAAAAQDAACs
+				mGAIAwAAABgAAAABBgAAoAAAALAAAADAAAAA0AAAAOAA
+				AADwAAAACAAAAAAEAABBv7YFyQAAABgAAAABAgAAAQAA
+				AAAAAAAPAAAAAAAAAAAAAAAAAAAACAAAAAQDAAAEAAAA
+				AAAAAAQAAAADAwAA9QEAAAgAAAABCQAAZmlsZTovLy8M
+				AAAAAQEAAE1hY2ludG9zaCBIRAgAAAAEAwAAAODFMnQA
+				AAAIAAAAAAQAAEG+3V1iAAAAJAAAAAEBAAAyNUU0Mjg2
+				RC03MTJDLTM4OTktQjQzRi01RDNGNkE4QkQxMjEYAAAA
+				AQIAAIEAAAABAAAA7xMAAAEAAAAAAAAAAAAAAAEAAAAB
+				AQAALwAAAAAAAAABBQAAzAAAAP7///8BAAAAAAAAABAA
+				AAAEEAAAgAAAAAAAAAAFEAAAAAEAAAAAAAAQEAAAMAEA
+				AAAAAABAEAAAIAEAAAAAAAACIAAA/AEAAAAAAAAFIAAA
+				bAEAAAAAAAAQIAAAfAEAAAAAAAARIAAAsAEAAAAAAAAS
+				IAAAkAEAAAAAAAATIAAAoAEAAAAAAAAgIAAA3AEAAAAA
+				AAAwIAAACAIAAAAAAAABwAAAUAEAAAAAAAARwAAAIAAA
+				AAAAAAASwAAAYAEAAAAAAAAQ0AAABAAAAAAAAAA=
+				</data>
+				<key>FileURL</key>
+				<string>file:///Users/rpage/Sites/tree-to-triples/gmlreader/gml2rdf.cpp</string>
+				<key>HasSecurityScope</key>
+				<true/>
+				<key>RelativePath</key>
+				<string>./gmlreader/gml2rdf.cpp</string>
+				<key>TypeID</key>
+				<string>_CFileLocator</string>
+				<key>Version</key>
+				<integer>1</integer>
+			</dict>
+			<key>ItemName</key>
+			<string>gml2rdf.cpp</string>
 			<key>ItemType</key>
 			<string>FileReference</string>
 			<key>UserOverrideItemName</key>

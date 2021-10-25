@@ -1,11 +1,33 @@
 /vendor/
 .DS_Store
 
+
+dwca/tmp/
+
+# Oxigraph
+
 *.log
 *.sst
 CURRENT
 IDENTITY
 LOCK
 LOG
+LOG.old.*
 MANIFEST-*
 OPTIONS-*
+
+# cpp
+
+*.m4
+*.o
+*.Po
+*.a
+compile
+configure
+config.status
+depcomp
+install-sh
+Makefile
+Makefile.in
+missing
+/gmlreader/autom4te.cache/
