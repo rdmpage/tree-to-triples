@@ -16,6 +16,12 @@ while (!feof($file_handle))
 	$parts = fgetcsv(
 		$file_handle
 		);
+		
+	$go = is_array($parts);
+	
+	if ($go)
+	{
+		
 	
 	if ($count == 0)
 	{
@@ -96,13 +102,17 @@ while (!feof($file_handle))
 		$node_paths[$path] = $id;		
 	}
 	$count++;
+	}
 	
 }
 fclose($file_handle);
 
+//print_r($paths);
+
 // Graph
 $t = new Tree;
 $t->PathsToTree($paths);
+
 
 // GML
 
@@ -113,7 +123,7 @@ comment "MSW"
 directed 1
 ';
 
-echo 'node [id 0 label "Mammalia" ]' . "\n";
+//echo 'node [id 0 label "Mammalia" ]' . "\n";
 
 foreach ($t->nodes as $node)
 {
@@ -121,7 +131,7 @@ foreach ($t->nodes as $node)
 	
 	if ($id == '')
 	{
-		//echo 'node [id 0 label "Mammalia" ]' . "\n";
+		echo 'node [id 0 label "Mammalia" ]' . "\n";
 	}
 	else
 	{
@@ -147,4 +157,4 @@ echo ']' . "\n";
 
 
 
-?>	
+?>
